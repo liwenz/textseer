@@ -1,44 +1,211 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-    <meta charset="utf-8">
-    <title>Privacy Policy for TextSeer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - 文字识别应用 / Text Recognizer</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .language-switcher {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .language-switcher button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            margin: 0 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .language-switcher button.active {
+            background: #2980b9;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .language-section {
+            display: none;
+        }
+        .language-section.active {
+            display: block;
+        }
+        .last-updated {
+            color: #7f8c8d;
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+        .contact {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-<h1>Privacy Policy</h1>
-<p><strong>Last updated:</strong> [今天的日期，例如: 2023-10-27]</p>
+    <div class="container">
+        <div class="language-switcher">
+            <button onclick="switchLanguage('zh')" id="btn-zh" class="active">中文</button>
+            <button onclick="switchLanguage('en')" id="btn-en">English</button>
+        </div>
 
-<p>This Privacy Policy describes how information is handled in the <strong>TextSeer</strong> mobile application (the "App").</p>
+        <!-- 中文版本 -->
+        <div id="zh-section" class="language-section active">
+            <h1>隐私政策</h1>
+            <p class="last-updated">最后更新日期：2024年12月1日</p>
 
-<h2>1. Information We Collect</h2>
-<p>The App processes the following information on your device:</p>
-<ul>
-    <li><strong>Camera Feed and Images:</strong> When you use the scanning feature, the App accesses your device's camera to capture images in real-time for the purpose of text and barcode recognition.</li>
-    <li><strong>Photos from Your Gallery:</strong> If you choose to select an image from your device's photo gallery for recognition.</li>
-</ul>
-<p><strong>Important:</strong> All image processing is performed <strong>locally on your device</strong>. We do not store, upload, or transmit any images or the extracted text/data to our servers or any third-party servers.</p>
+            <p>欢迎使用<b>文字识别应用</b>（以下简称"本应用"）。我们高度重视您的隐私保护，本政策详细说明了我们如何收集、使用和保护您的信息。</p>
 
-<h2>2. How We Use Your Information</h2>
-<p>The information collected is used solely for the following purposes:</p>
-<ul>
-    <li>To provide the core functionality of the App, which is optical character recognition (OCR) and barcode scanning.</li>
-    <li>To display the recognition results to you within the App.</li>
-</ul>
+            <h2>1. 信息收集与使用</h2>
+            <p>本应用作为一款离线文字识别工具，我们遵循最小化数据收集原则：</p>
+            <ul>
+                <li><b>相机数据</b>：用于实时文字识别和条码扫描，所有图像处理均在设备本地完成，图像数据不会离开您的设备。</li>
+                <li><b>图片文件</b>：当您选择相册图片进行识别时，图片仅在设备内存中临时处理，不会上传到任何服务器。</li>
+                <li><b>识别结果</b>：提取的文字和条码信息仅在应用运行时临时保存在设备内存中，用于您的复制、分享等操作。</li>
+                <li><b>应用设置</b>：您的个人偏好设置（如语言选择）仅存储在设备本地。</li>
+            </ul>
 
-<h2>3. Data Processing and Third-Party Services</h2>
-<p>The App uses <strong>Google ML Kit</strong> libraries for on-device text and barcode recognition. The images you process are sent to these libraries locally on your device for analysis. Google's use of information is governed by their Privacy Policy, which you can find here: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>.</p>
+            <h2>2. 第三方服务</h2>
+            <p>本应用使用Google ML Kit进行文字和条码识别功能。根据Google的隐私政策，某些识别过程可能涉及数据传输。详细信息请参阅：
+                <a href="https://policies.google.com/privacy" target="_blank">Google隐私政策</a>
+            </p>
 
-<h2>4. Data Retention</h2>
-<p>We do not retain any images or recognition results. All processing is transient and happens in memory for the sole purpose of providing you with the result. Once the processing is complete, the image data is discarded from the App's memory.</p>
+            <h2>3. 权限说明</h2>
+            <p>本应用需要以下权限以实现核心功能：</p>
+            <ul>
+                <li><b>相机权限</b>：仅用于实时扫描文字和条码，不用于录制视频或监控。</li>
+                <li><b>相册权限</b>：仅用于选择待识别的图片文件。</li>
+                <li><b>网络权限</b>：用于ML Kit可能需要的模型更新功能。</li>
+            </ul>
 
-<h2>5. Your Rights</h2>
-<p>Since we do not collect or store your personal data, the data subject rights under laws like GDPR do not apply in the context of our App. You maintain full control over the images you process.</p>
+            <h2>4. 数据存储与保留</h2>
+            <p>所有数据处理均在您的设备上完成：</p>
+            <ul>
+                <li>识别结果不会在我们的服务器上存储</li>
+                <li>图片数据在处理后立即从内存中清除</li>
+                <li>应用设置仅保存在您的设备本地存储中</li>
+            </ul>
 
-<h2>6. Changes to This Privacy Policy</h2>
-<p>We may update our Privacy Policy from time to time. Thus, we advise you to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective immediately after they are posted.</p>
+            <h2>5. 数据安全</h2>
+            <p>我们采用行业标准的安全措施来保护您的信息：</p>
+            <ul>
+                <li>所有数据处理都在设备端进行</li>
+                <li>不收集个人身份信息</li>
+                <li>不与其他应用或服务共享用户数据</li>
+            </ul>
 
-<h2>7. Contact Us</h2>
-<p>If you have any questions or suggestions about this Privacy Policy, do not hesitate to contact us at <strong>Leon.zeng0@gmail.com</strong>.</p>
+            <h2>6. 儿童隐私</h2>
+            <p>本应用不面向13岁以下儿童。我们不会故意收集13岁以下儿童的个人信息。</p>
 
+            <h2>7. 政策变更</h2>
+            <p>我们可能会不时更新本隐私政策。任何变更都会在本页面发布，并通过应用内通知告知您。</p>
+
+            <h2>8. 联系我们</h2>
+            <div class="contact">
+                <p>如果您对本隐私政策有任何疑问或建议，请通过以下方式联系我们：</p>
+                <p>📧 邮箱：leon.zeng0@gmail.com</p>
+            </div>
+        </div>
+
+        <!-- 英文版本 -->
+        <div id="en-section" class="language-section">
+            <h1>Privacy Policy</h1>
+            <p class="last-updated">Last Updated: December 1, 2024</p>
+
+            <p>Welcome to <b>Text Recognizer App</b> (hereinafter referred to as "the App"). We highly value your privacy protection. This policy details how we collect, use, and protect your information.</p>
+
+            <h2>1. Information Collection and Use</h2>
+            <p>As an offline text recognition tool, this App follows the principle of minimal data collection:</p>
+            <ul>
+                <li><b>Camera Data</b>: Used for real-time text recognition and barcode scanning. All image processing is done locally on your device, and image data never leaves your device.</li>
+                <li><b>Image Files</b>: When you select photos from your gallery for recognition, images are temporarily processed in device memory only and are not uploaded to any servers.</li>
+                <li><b>Recognition Results</b>: Extracted text and barcode information is temporarily stored in device memory during app runtime only, for your copy, share and other operations.</li>
+                <li><b>App Settings</b>: Your personal preference settings (such as language selection) are stored locally on the device only.</li>
+            </ul>
+
+            <h2>2. Third-Party Services</h2>
+            <p>This App uses Google ML Kit for text and barcode recognition functions. According to Google's privacy policy, certain recognition processes may involve data transmission. For details, please refer to:
+                <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a>
+            </p>
+
+            <h2>3. Permission Explanation</h2>
+            <p>This App requires the following permissions to achieve core functions:</p>
+            <ul>
+                <li><b>Camera Permission</b>: Used only for real-time scanning of text and barcodes, not for video recording or surveillance.</li>
+                <li><b>Gallery Permission</b>: Used only for selecting image files to be recognized.</li>
+                <li><b>Network Permission</b>: Used for potential model updates required by ML Kit.</li>
+            </ul>
+
+            <h2>4. Data Storage and Retention</h2>
+            <p>All data processing is completed on your device:</p>
+            <ul>
+                <li>Recognition results are not stored on our servers</li>
+                <li>Image data is immediately cleared from memory after processing</li>
+                <li>App settings are saved only in your device's local storage</li>
+            </ul>
+
+            <h2>5. Data Security</h2>
+            <p>We employ industry-standard security measures to protect your information:</p>
+            <ul>
+                <li>All data processing occurs on the device</li>
+                <li>No personal identification information is collected</li>
+                <li>User data is not shared with other apps or services</li>
+            </ul>
+
+            <h2>6. Children's Privacy</h2>
+            <p>This App is not directed at children under 13 years of age. We do not knowingly collect personal information from children under 13.</p>
+
+            <h2>7. Policy Changes</h2>
+            <p>We may update this privacy policy from time to time. Any changes will be posted on this page and notified to you through in-app notifications.</p>
+
+            <h2>8. Contact Us</h2>
+            <div class="contact">
+                <p>If you have any questions or suggestions about this Privacy Policy, please contact us at:</p>
+                <p>📧 Email: leon.zeng0@gmail.com</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function switchLanguage(lang) {
+            // 隐藏所有语言部分
+            document.querySelectorAll('.language-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // 显示选中的语言部分
+            document.getElementById(lang + '-section').classList.add('active');
+            
+            // 更新按钮状态
+            document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+        }
+
+        // 可选：根据用户浏览器语言自动选择
+        const userLang = navigator.language || navigator.userLanguage;
+        if (userLang.startsWith('zh')) {
+            switchLanguage('zh');
+        } else {
+            switchLanguage('en');
+        }
+    </script>
 </body>
 </html>
